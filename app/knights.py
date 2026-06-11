@@ -1,3 +1,4 @@
+from __future__ import annotations
 try:
     from equip.weapons import Weapon
     from equip.armour import Armour
@@ -28,7 +29,10 @@ class Knight:
             self.hp += self.potion.hp
             self.protection += self.potion.protection
 
-    def attack(self, other: Knight) -> None:
+    def fight(self, other: Knight) -> None:
         other.hp -= (self.power - other.protection)
+        self.hp -= (other.power - self.protection)
         if other.hp <= 0:
             other.hp = 0
+        if self.hp <= 0:
+            self.hp = 0
