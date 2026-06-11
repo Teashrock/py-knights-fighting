@@ -20,7 +20,7 @@ class Knight:
         self.protection = 0
         for armour in self.armour:
             self.protection += armour.protection
-        
+
         self.power += self.weapon.power
 
         if self.potion:
