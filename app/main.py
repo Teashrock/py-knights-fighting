@@ -4,7 +4,7 @@ except ImportError:
     from app.knights import Knight
 
 
-KNIGHTS = {
+KNIGHTS_DICT_DATA = {
     "lancelot": {
         "name": "Lancelot",
         "power": 35,
@@ -92,19 +92,19 @@ KNIGHTS = {
 }
 
 
-def battle(knights_config: dict) -> dict:
+def battle(knights_config: dict) -> dict[str, int]:
     # BATTLE PREPARATIONS:
 
-    knights = [Knight(knight) for _, knight in knights_config.items()]
+    knight_list = [Knight(knight) for _, knight in knights_config.items()]
 
     # -------------------------------------------------------------------------------
     # BATTLE:
 
-    for i in range(0, int(len(knights) / 2)):
-        knights[i].fight(knights[i + 2])
+    for i in range(0, int(len(knight_list) / 2)):
+        knight_list[i].fight(knight_list[i + 2])
 
     # Return battle results:
-    return {knight.name: knight.hp for knight in knights}
+    return {knight.name: knight.hp for knight in knight_list}
 
 
-print(battle(KNIGHTS))
+print(battle(KNIGHTS_DICT_DATA))

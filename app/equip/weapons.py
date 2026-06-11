@@ -1,4 +1,4 @@
 class Weapon:
-    def __init__(self, json: dict) -> None:
-        self.name = json["name"]
-        self.power = json["power"]
+    def __init__(self, weapon_data: dict) -> None:
+        self.name = weapon_data["name"]
+        self.power = weapon_data["power"]

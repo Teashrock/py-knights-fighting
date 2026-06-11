@@ -1,6 +1,6 @@
 class Potion:
-    def __init__(self, json: dict) -> None:
-        self.name = json["name"]
-        self.power = json["effect"].get("power", 0)
-        self.hp = json["effect"].get("hp", 0)
-        self.protection = json["effect"].get("protection", 0)
+    def __init__(self, potion_data: dict) -> None:
+        self.name = potion_data["name"]
+        self.power = potion_data["effect"].get("power", 0)
+        self.hp = potion_data["effect"].get("hp", 0)
+        self.protection = potion_data["effect"].get("protection", 0)
