@@ -3,6 +3,7 @@ try:
 except ImportError:
     from app.knights import Knight
 
+
 def battle(knights_config: dict) -> dict[str, int]:
     # BATTLE PREPARATIONS:
 
