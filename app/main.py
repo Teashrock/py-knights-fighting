@@ -7,7 +7,7 @@ except ImportError:
 def battle(knights_config: dict) -> dict[str, int]:
     # BATTLE PREPARATIONS:
 
-    knight_list = [Knight(knight) for _, knight in knights_config.items()]
+    knight_list = [Knight(knight) for knight in knights_config.values()]
 
     # -------------------------------------------------------------------------------
     # BATTLE:
