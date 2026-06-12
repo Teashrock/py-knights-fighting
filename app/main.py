@@ -12,7 +12,7 @@ def battle(knights_config: dict) -> dict[str, int]:
     # -------------------------------------------------------------------------------
     # BATTLE:
 
-    for i in range(0, int(len(knight_list) / 2)):
+    for i in range(len(knight_list) // 2):
         knight_list[i].fight(knight_list[i + 2])
 
     # Return battle results:
