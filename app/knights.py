@@ -17,7 +17,7 @@ class Knight:
             self.protection += armour["protection"]
         self.weapon = Weapon(knight_data["weapon"])
         self.potion = (
-            Potion(knight_data["potion"]) 
+            Potion(knight_data["potion"])
             if knight_data["potion"] else None
         )
 
